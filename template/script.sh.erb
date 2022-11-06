@@ -24,6 +24,8 @@ module list
 # Benchmark info
 echo "TIMING - Starting jupyter at: $(date)"
 
+source /usr/local/jupyter/2.1.4/bin/activate
+
 # Launch the Jupyter Notebook Server
 set -x
 jupyter notebook --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>
